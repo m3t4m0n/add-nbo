@@ -9,6 +9,11 @@ int main(int argc, char *argv[]) {
 	FILE *fp1 = fopen(argv[1], "rb");
 	FILE *fp2 = fopen(argv[2], "rb");
 	
+	if(argc != 3) {
+		printf("example : ./add-nbo argv1 argv2\n");
+		exit(1);
+	}
+
 	if(fp1 == NULL || fp2 == NULL) {
 		printf("fopen error\n");
 		exit(1);
